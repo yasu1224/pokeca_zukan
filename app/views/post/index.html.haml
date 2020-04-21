@@ -1,60 +1,73 @@
-.header
-  .header__content
-    .header__content__logo
-      Pokeca図鑑
-    .header__content__search
-  .header__nav
-    %ul
-      %li
-        キーワードで探す
-      %li
-        拡張BOXから探す
-      %li
-        いいね一覧
-      %li
-        新着情報
-      %li
-        ログイン
-      %li
-        新規登録
-.main__content
-  .main__content__top
-    %image_tag 
-  .main__content__middle
-    .main__content__middle--items
-      いいねしたカード
-      %ul
+.topview
+  .header
+    .header__content
+      .header__content__logo
+        POKEYARU
+      .header__content__search
+        検索バー
+    .header__nav
+      %ul.header__nav__list
         %li
-          item1
+          = link_to "#" do
+            キーワードで探す
         %li
-          item2
+          = link_to "#" do
+            拡張BOXから探す
         %li
-          item3
+          = link_to "#" do
+            いいね一覧
         %li
-          item4
+          = link_to "#" do
+            お知らせ
         %li
-          item5
-  .main__content__category
-    人気カテゴリー
-    %ul
-      %li
-        ファーストBOX
-      %li
-        セカンドBOX
-      %li
-        サードBOX
-  .main__content__bottom
-    .main__content__bottom--items
-      いいねしたカード
-      %ul
+          = link_to "#" do
+            ログイン
         %li
-          item1
+          = link_to "#" do
+            新規登録
+  .main__content
+    .main__content__top
+      アプリでかんたん
+      %br
+      ポケモンカード図鑑アプリ
+      %br
+      君だけのポケモンカード図鑑を完成させよう！！
+      %image_tag 
+    .main__content__middle
+      .main__content__middle--items
+        %h2 いいねしたカード
+        %ul.middle__item--list
+          %li.middle__item--list__1
+            item1
+          %li.middle__item--list__1
+            item2
+          %li.middle__item--list__1
+            item3
+          %li.middle__item--list__1
+            item4
+          %li.middle__item--list__1
+            item5
+    .main__content__category
+      %h2 人気カテゴリー
+      %ul.Recommended__category
         %li
-          item2
+          ファーストBOX
         %li
-          item3
+          セカンドBOX
         %li
-          item4
-        %li
-          item5
-.footer
+          サードBOX
+    .main__content__bottom
+      .main__content__bottom--items
+        %h2 新着カード
+        %ul.bottom__item--list
+          %li.bottom__item--list__2
+            item1
+          %li.bottom__item--list__2
+            item2
+          %li.bottom__item--list__2
+            item3
+          %li.bottom__item--list__2
+            item4
+          %li.bottom__item--list__2
+            item5
+  .footer
