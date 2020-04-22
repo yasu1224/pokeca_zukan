@@ -1,24 +1,51 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ポケモンカードの情報をまとめるアプリ
+* ポケモンカードの情報を発売BOXとカードに紐付けて検索できるWebサイト。
 
-Things you may want to cover:
 
-* Ruby version
+## 機能一覧
 
-* System dependencies
 
-* Configuration
+## 使用技術一覧
+|種別|名称|
+|----|----|
+|開発言語|Ruby(ver 2.5.1)|
+|フレームワーク|Ruby on Rails(ver 5.2.4.1)|
+|マークアップ|HTML(Haml),CSS(Sass)|
+|フロントエンド|JavaScript(jQuery)|
+|DB|PostgreSQL|
+|データ管理|activeacmin|
+|ユーザー管理|devise|
 
-* Database creation
+# 以降DB設計
+## adminテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
 
-* Database initialization
+## Association
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## pokecaテーブル
+|Column|Type|Options|
+|------|----|-------|
+|card_name|string|null: false|
+|rarity|string|null: false|
+|image|string|null: false|
+|detail|text|null: false|
+|category|references|null: false, foreign_key|
+|admin|references|null: false, foreign_key|
 
-* ...
+## Association
+
+
+
+## categoryテーブル
+|Column|Type|Options|
+|------|----|-------|
+|box_name|string|null: false|
+
+## Association
